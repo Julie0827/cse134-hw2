@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Julie</title>
     <link rel="icon" href="assets/favicon.png" type="image/png">
-    <style>
-        #profile {
-            width:200px; 
-        }
-        
+    <style>        
         th, td {
             border: 1px solid black;
         }
     </style>
 </head>
 <body>
+    <noscript>
+        <p>⭐ <strong>JavaScript is disabled. Please enable it for the best experience! <strong>⭐</p>
+    </noscript>
     <header>
         <a href="index.html">
             <img src="assets/logo.png" alt="Logo">
@@ -40,8 +39,8 @@
 
         <h3>Biography</h3>
         <p>Hi, I'm Julie! I'm a fourth-year Computer Science student at UC San Diego. I love learning new things, especially when it comes to tech. Some of my favorite classes so far have been <strong>Operating Systems</strong> and <strong>Computer Networks</strong>, and lately, I’ve been diving deeper into OS in my free time.</p>
-        <p>Outside of school, I love reading sci-fi books, and <em>Ready Player One</em> is one of my all-time favorites. I also love animals—I have a puppy, and she means the world to me!</p>
-        <p>I really enjoy studying on campus with my friends, and we always end up at <strong>Franklin Antonio Hall</strong>, our favorite spot. I'm also part of the <strong>Competitive Programming Club</strong>, where I help out as the Marketing Director.</p>
+        <p>Outside of school, I love reading sci-fi books, and <cite>Ready Player One</cite> is one of my all-time favorites. I also love animals—I have a puppy, and she means <em>the world</em> to me!</p>
+        <p>I really enjoy studying on campus with my friends, and we always end up at <strong>Franklin Antonio Hall</strong>, our favorite spot. I'm also part of the <strong>Competitive Programming Club</strong>, where I help out as the Marketing Director. Our club competes in the <abbr title="International Collegiate Programming Contest">ICPC</abbr> and helps students improve problem-solving and algorithmic thinking.</p>
         <p>As for my career path, I’m still figuring things out, but for now, I’m just enjoying learning, coding, and spending time with the people I love.</p>
         
         <details>
@@ -66,13 +65,10 @@
             <h2>Experiments</h2>
             <h3>Welcome to the Experiments section!</h3>
             <p>This part of the site is separate from my portfolio and is meant for testing HTML tags that don’t naturally fit elsewhere. <strong>The goal is to explore different elements as part of Homework 2.</strong> Thanks for stopping by!</p>
-            
-            <div class="experiment">
-                <p>The tags I’m testing here are &lt;b&gt; and &lt;i&gt;. My professor mentioned that these tags are purely presentational, so for semantic purposes, we should use &lt;strong&gt; and &lt;em&gt; instead.</p>
-                <p>Now, here’s an example of <b>bold</b> and <i>italic</i> text using &lt;b&gt; and &lt;i&gt;!</p>
-            </div>
 
-            <div class="experiment">
+            <div id="experiment-container">
+                <p>If you’re using a Mac, you can press <kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>I</kbd> to open the <abbr title="Developer Tools">DevTools</abbr> in your browser and look at the source code of this website!</p>
+
                 <p>Here’s my schedule for the next three quarters, displayed using an HTML table.</p>
                 <table>
                     <colgroup>
@@ -145,8 +141,61 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
 
+                <p>Hi, my name is <del>Joohee</del> <ins>Julie</ins> Hong, and I live in <del>Pleasant Hill</del> <ins>San Diego</ins>!</ins></p>
+                
+                <p>Here are my top three favorite foods that always make me happy:</p>
+                <ol>
+                    <li>Avocado</li>
+                    <li>Chocolate</li>
+                    <li>Boba</li>
+                </ol>
+
+                My professor mentioned that these tags are purely presentational, so for semantic purposes, we should use &lt;strong&gt; and &lt;em&gt; instead.</p>
+                <p>Now, here’s an example of <b>bold</b> and <i>italic</i> text using &lt;b&gt; and &lt;i&gt;!</p>
+
+                <p>I plan to include code snippets on my project page as part of my demonstration, but since I’m still working on my website and haven’t decided what to add yet, I’ll use this space to practice the &lt;code&gt; tag. I’m sure it’ll be useful!</p>
+                <pre>
+                    <code>
+                        #include &lt;iostream&gt;
+                        using namespace std;
+
+                        int main() {
+                            count &lt;&lt; "Hello World!";
+                            return 0;
+                        }
+                    </code>
+                </pre>
+                
+                <p>I want to share a pohto of my puppy because she brings me so much joy!</p>
+                <figure>
+                    <img src="assets/my_puppy.jpg" alt="My puppy in a pink t-shirt">
+                    <figcaption>Here's my puppy! She's the cutest, and I love her so much.</figcaption>
+                </figure>
+
+                <p>Here’s another photo of my puppy, but this time, I used the <picture> tag to display it in three different sizes based on the screen width.</p>
+                <picture>
+                    <source srcset="assets/puppy-large.png" media="(min-width: 1000px)">
+                    <source srcset="assets/puppy-medium.png" media="(min-width: 600px)">
+                    <img src="assets/puppy-small.png" alt="My puppy in a pink sweater">
+                </picture>
+                
+                <p>Here’s one of my favorite quotes:</p>
+                <blockquote>
+                    "Everything should be made as simple as possible, but not simpler."
+                    <cite>— Albert Einstein</cite>
+                </blockquote>
+
+                <p>Here are some key terms I learned in my CSE 120 Operating Systems class:</p>
+                <dl>
+                    <dt>Paging</dt>
+                    <dd>A way for the OS to manage memory by dividing it into fixed-size pages.</dd>
+                    
+                    <dt>Condition Variable</dt>
+                    <dd>A tool used in multithreading to help threads wait for a condition before continuing.</dd>
+                </dl>
+                <p>One key concept I learned in my OS class is <dfn>multithreading</dfn>, which allows a program to run multiple tasks at the same time, improving performance and efficiency.</p>
+            </div>
         </section>
     </main>
     <footer>
