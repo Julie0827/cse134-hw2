@@ -9,6 +9,9 @@
         th, td {
             border: 1px solid black;
         }
+        canvas {
+            border: 1px solid black;
+        }
     </style>
 </head>
 <body>
@@ -28,6 +31,10 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <search>
+            <input type="text" id="searchBox" placeholder="Search...">
+            <button type="submit">🔍</button>
+        </search>
     </header>
     <main>
         <hgroup>
@@ -50,7 +57,7 @@
 
         <hr>
         <h3>Skills</h3>
-        <p>I'm comfortable working with <strong>C++, Java, Python, and C</strong>, and I also have experience with <strong>HTML, CSS, and JavaScript</strong>, though I'm still improving my web development skills. I’ve worked with <strong>Pandas, NumPy, and Scikit-Learn</strong>, along with <strong>YOLOv8</strong> and <strong>PyTorch</strong> for machine learning tasks. I’ve also learned <strong>Docker</strong> for containerization and have experience working in <strong>Linux and macOS environments</strong>. In addition, I have some experience with <strong>x86 Assembly</strong> and an understanding of <strong>operating systems concepts</strong> like process management and memory allocation.</p>
+        <p>I'm comfortable working with <span class="cpp programming"><strong>C++</strong></span>, <span class="java programming"><strong>Java</strong></span>, <span class="python programming"><strong>Python</strong></span>, and <span class="c programming"><strong>C</strong></span>, and I also have experience with <span class="programming"><strong>HTML</strong></span>, <span class="programming"><strong>CSS</strong></span>, and <span class="programming"><strong>JavaScript</strong></span>, though I'm still improving my web development skills. I’ve worked with <strong>Pandas</strong>, <strong>NumPy</strong>, and <strong>Scikit-Learn</strong>, along with <strong>YOLOv8</strong> and <strong>PyTorch</strong> for machine learning tasks. I’ve also learned <strong>Docker</strong> for containerization and have experience working in <strong>Linux</strong> and <strong>macOS</strong> environments. In addition, I have some experience with <strong>x86 Assembly</strong> and an understanding of <strong>operating systems concepts</strong> like process management and memory allocation.</p>
         
         <hr>
         <h3>Experience</h3>
@@ -66,7 +73,7 @@
             <h3>Welcome to the Experiments section!</h3>
             <p>This part of the site is separate from my portfolio and is meant for testing HTML tags that don’t naturally fit elsewhere. <strong>The goal is to explore different elements as part of Homework 2.</strong> Thanks for stopping by!</p>
 
-            <div id="experiment-container">
+            <div id="experimentContainer">
                 <p>If you’re using a Mac, you can press <kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>I</kbd> to open the <abbr title="Developer Tools">DevTools</abbr> in your browser and look at the source code of this website!</p>
 
                 <p>Here’s my schedule for the next three quarters, displayed using an HTML table.</p>
@@ -151,6 +158,44 @@
                     <li>Boba</li>
                 </ol>
 
+                <form action="https://formspree.io/f/myzkjbea" method="POST">
+                    <label for="food">What is your favorite food?</label>
+                    <select id="food" name="food">
+                        <option value="" disabled selected>Select your favorite food</option>
+                        <optgroup label="Main Dishes">
+                            <option value="Pizza">Pizza</option>
+                            <option value="Burgers">Burgers</option>
+                            <option value="Sushi">Sushi</option>
+                            <option value="Pasta">Pasta</option>
+                            <option value="Chicken">Chicken</option>
+                            <option value="Kbbq">Kbbq</option>
+                        </optgroup>
+                        <optgroup label="Desserts">    
+                            <option value="Ice Cream">Ice Cream</option>
+                            <option value="Donuts">Donuts</option>
+                            <option value="Macaron">Macaron</option>
+                            <option value="Cake">Cake</option>
+                        </optgroup>
+                    </select>
+                    <br>
+                    <label for="animal">What is your favorite animal?</label>
+                    <input list="animals" id="animal" name="animal" placeholder="Choose an animal">
+                    <datalist id="animals">
+                        <option value="Dog">
+                        <option value="Cat">
+                        <option value="Elephant">
+                        <option value="Lion">
+                        <option value="Tiger">
+                        <option value="Giraffe">
+                        <option value="Panda">
+                        <option value="Koala">
+                        <option value="Horse">
+                        <option value="Rabbit">
+                    </datalist>
+                    <br>
+                    <button type="submit">Submit</button>
+                </form>
+
                 My professor mentioned that these tags are purely presentational, so for semantic purposes, we should use &lt;strong&gt; and &lt;em&gt; instead.</p>
                 <p>Now, here’s an example of <b>bold</b> and <i>italic</i> text using &lt;b&gt; and &lt;i&gt;!</p>
 
@@ -195,6 +240,21 @@
                     <dd>A tool used in multithreading to help threads wait for a condition before continuing.</dd>
                 </dl>
                 <p>One key concept I learned in my OS class is <dfn>multithreading</dfn>, which allows a program to run multiple tasks at the same time, improving performance and efficiency.</p>
+
+                <p>Here’s a simple canvas.</p>
+                <canvas id="myCanvas"></canvas>
+
+                <p>Here's a simple vector graphic I created using SVG.</p>
+                <svg>
+                    <circle cx="100" cy="50" r="30" stroke="black">
+                </svg>
+
+                <template id="projectTemplate">
+                    <h3>Project Title</h3>
+                    <img src="assets/default.png" alt="Project Thumbnail">
+                    <p>Description of the project goes here.</p>
+                    <a href="https://github.com/repo-link" target="_blank">GitHub Repository</a>
+                </template>
             </div>
         </section>
     </main>
@@ -205,5 +265,18 @@
             <li><a href="mailto:joh046@ucsd.edu" target="_blank">joh046@ucsd.edu</a></li>
         </ul>
     </footer>
+
+    <dialog id="myDialog">
+        <p>Thank you for reading my page!</p>
+        <button id="closeBtn">Close</button>
+    </dialog>
+
+    <script>
+        let canvas = document.getElementById("myCanvas");
+        let ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "black";
+        ctx.fillRect(100, 50, 100, 50);
+    </script>
 </body>
 </html>
