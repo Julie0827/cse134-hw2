@@ -9,8 +9,8 @@
     <style>        
         my-status {
             display: inline-flex;
-            /* align-items: center; */
-            /* justify-content: center; */
+            align-items: center;
+            justify-content: center;
             padding: 8px 14px;
             border-radius: 100px;
             font-family:'Poppins', sans-serif;
@@ -19,8 +19,8 @@
             font-weight: bold;
             color: #202020;
             text-transform: capitalize;
-            gap: 20px;
-            border: 2px solid #202020;
+            gap: 10px;
+            margin: 3px;
         }
 
         my-status[data-status="looking"] {
@@ -28,7 +28,7 @@
         }
 
         my-status[data-status="open"] {
-            background-color: #c8f7f7;
+            background-color: #f7e1f7;
         }
 
         my-status[data-status="freelance"] {
@@ -36,41 +36,52 @@
         }
 
         my-status[data-status="collab"] {
-            background-color: #f7e1f7;
+            background-color: #c8f7f7;
         }
         
         my-status[data-status="looking"]::before {
-            width: 20px;
-            height: 20px;
-            content: url("assets/favicon.png");
+            content: "";
             display: inline-block;
-            vertical-align: middle;
+            width: 30px;
+            height: 30px;
+            background-image: url("assets/looking.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         my-status[data-status="open"]::before {
-            width: 20px;
-            height: 20px;
-            content: url("assets/favicon.png");
+            content: "";
             display: inline-block;
-            vertical-align: middle;
+            width: 30px;
+            height: 30px;
+            background-image: url("assets/open.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         my-status[data-status="freelance"]::before {
-            width: 20px;
-            height: 20px;
-            content: url("assets/favicon.png");
+            content: "";
             display: inline-block;
-            vertical-align: middle;
+            width: 30px;
+            height: 30px;
+            background-image: url("assets/freelance.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         my-status[data-status="collab"]::before {
-            width: 20px;
-            height: 20px;
-            content: url("assets/favicon.png");
+            content: "";
             display: inline-block;
-            vertical-align: middle;
+            width: 30px;
+            height: 30px;
+            background-image: url("assets/collab.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
-
     </style>
 </head>
 <body>
