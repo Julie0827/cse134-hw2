@@ -5,6 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julie</title>
     <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>        
+        my-status {
+            display: inline-flex;
+            /* align-items: center; */
+            /* justify-content: center; */
+            padding: 8px 14px;
+            border-radius: 100px;
+            font-family:'Poppins', sans-serif;
+            letter-spacing: 0.5px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: #202020;
+            text-transform: capitalize;
+            gap: 20px;
+            border: 2px solid #202020;
+        }
+
+        my-status[data-status="looking"] {
+            background-color: #cef5c6
+        }
+
+        my-status[data-status="open"] {
+            background-color: #c8f7f7;
+        }
+
+        my-status[data-status="freelance"] {
+            background-color: #ffeebf;
+        }
+
+        my-status[data-status="collab"] {
+            background-color: #f7e1f7;
+        }
+        
+        my-status[data-status="looking"]::before {
+            width: 20px;
+            height: 20px;
+            content: url("assets/favicon.png");
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        my-status[data-status="open"]::before {
+            width: 20px;
+            height: 20px;
+            content: url("assets/favicon.png");
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        my-status[data-status="freelance"]::before {
+            width: 20px;
+            height: 20px;
+            content: url("assets/favicon.png");
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        my-status[data-status="collab"]::before {
+            width: 20px;
+            height: 20px;
+            content: url("assets/favicon.png");
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+    </style>
 </head>
 <body>
     <noscript>
@@ -31,6 +98,10 @@
             <source src="assets/background_audio.mp3" type="audio/mp3">
             Sorry, your browswer doesn't support this audio.
         </audio>
+        <my-status data-status="looking">Looking for a job</my-status>
+        <my-status data-status="open">Open to offers</my-status>
+        <my-status data-status="freelance">Freelance available</my-status>
+        <my-status data-status="collab">Open to collaborations</my-status>
     </header>
     <main>
         <h1>Hi, I'm Julie! Glad to Have You Here.</h1>
