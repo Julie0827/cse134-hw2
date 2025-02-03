@@ -117,6 +117,8 @@
     <main>
         <h1>Hi, I'm Julie! Glad to Have You Here.</h1>
         <p>I'm a fourth-year Computer Science student at UC San Diego, and this website is my portfolio. Here, you can learn more about me on the About Me page, explore my work on the Projects page, view and download my resume on the Resume page, and find my contact details on the Contact page. I hope you find this website helpful in getting to know me better. Thanks again for visiting!</p>
+        
+        <hello-world></hello-world>
 
         <img src="assets/project_thumbnail.png" alt="Project 1 Thumbnail">
         <img src="assets/project_thumbnail.png" alt="Project 2 Thumbnail">
@@ -129,5 +131,14 @@
             <li><a href="mailto:joh046@ucsd.edu" target="_blank">joh046@ucsd.edu</a></li>
         </ul>
     </footer>
+
+    <script>
+        class HelloWorldElement extends HTMLElement {
+            connectedCallback() {
+                console.log("Hello world!");
+            }
+        }
+        customElements.define("hello-world", HelloWorldElement);
+    </script>
 </body>
 </html>
